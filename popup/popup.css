@@ -1,0 +1,66 @@
+body{
+    width: 70px;
+    height: 100px;
+    text-align: center;
+}
+div + div{
+    margin-top: 10px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#checkboxLabel {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 34px;
+    border-radius: 17px;
+    background-color: #ddd;
+    transition-duration: 0.2s;
+    left: 14px;
+}
+
+#checkboxLabel span {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition-duration: 0.2s;
+}
+
+#checkboxLabel:before,
+#checkboxLabel:after{
+    position: absolute;
+    top: 0;
+    width: 34px;
+    font-size: 11px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;
+}
+
+#checkboxLabel:before {
+    left: 0;
+    content: 'ON';
+}
+
+#checkboxLabel:after {
+    right: 0;
+    content: 'OFF';
+}
+
+input:checked + #checkboxLabel {
+    background-color: #00c73c;
+}
+
+input:checked + #checkboxLabel span {
+/* left: 29px; */
+    transform: translateX(26px);
+}

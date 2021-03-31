@@ -1,0 +1,23 @@
+{
+    "name": "Highlighter",
+    "description": "핵심단어를 드래그 함으로써 가독성을 높이다.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage", "activeTab"],
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["contentScript.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "./popup/popup.html",
+        "default_icon": "./img/highlight.png"
+    },
+    "icons": {
+      "16": "./img/highlight.png",
+      "32": "./img/highlight.png",
+      "48": "./img/highlight.png",
+      "128": "./img/highlight.png"
+    }  
+}
